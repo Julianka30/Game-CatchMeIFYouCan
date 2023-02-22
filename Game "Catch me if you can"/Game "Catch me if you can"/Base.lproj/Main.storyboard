@@ -80,11 +80,7 @@
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catch Me If You Can 😎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19f-MC-Z79">
-                                <rect key="frame" x="65" y="69.333333333333329" width="262" height="38.666666666666671"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="38.670000000000002" id="55s-PK-dmk"/>
-                                    <constraint firstAttribute="width" constant="262" id="mFu-rP-6jd"/>
-                                </constraints>
+                                <rect key="frame" x="0.0" y="69" width="393" height="39"/>
                                 <fontDescription key="fontDescription" name="Noteworthy-Bold" family="Noteworthy" pointSize="24"/>
                                 <color key="textColor" name="textColor" catalog="System" colorSpace="catalog"/>
                                 <nil key="highlightedColor"/>
@@ -96,15 +92,13 @@
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="pMS-4Z-wBH" secondAttribute="trailing" constant="16" id="2Cv-r6-PFY"/>
                             <constraint firstItem="zJr-hA-DuI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="3hq-Ee-8Mx"/>
                             <constraint firstItem="zJr-hA-DuI" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="CMW-JL-Hh6"/>
-                            <constraint firstItem="19f-MC-Z79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10.33" id="IfB-hg-08C"/>
+                            <constraint firstItem="19f-MC-Z79" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="10" id="IfB-hg-08C"/>
                             <constraint firstItem="pMS-4Z-wBH" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="16" id="O3H-QX-qlV"/>
-                            <constraint firstItem="pMS-4Z-wBH" firstAttribute="top" secondItem="19f-MC-Z79" secondAttribute="bottom" constant="8" symbolic="YES" id="Rjh-wx-cMB"/>
                             <constraint firstItem="zJr-hA-DuI" firstAttribute="top" secondItem="pMS-4Z-wBH" secondAttribute="bottom" constant="8" symbolic="YES" id="hia-gr-agi"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="zJr-hA-DuI" secondAttribute="trailing" constant="16" id="olb-ds-bMU"/>
-                            <constraint firstItem="19f-MC-Z79" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="65" id="qJ6-O9-pqj"/>
-                            <constraint firstItem="pMS-4Z-wBH" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="57" id="uGN-0y-G7T"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19f-MC-Z79" secondAttribute="trailing" constant="66" id="vkc-pr-1BC"/>
-                            <constraint firstItem="pMS-4Z-wBH" firstAttribute="top" secondItem="19f-MC-Z79" secondAttribute="bottom" constant="8" symbolic="YES" id="zuz-lW-KNk"/>
+                            <constraint firstItem="pMS-4Z-wBH" firstAttribute="top" secondItem="19f-MC-Z79" secondAttribute="bottom" constant="8" symbolic="YES" id="p5H-sN-9yc"/>
+                            <constraint firstItem="19f-MC-Z79" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qJ6-O9-pqj"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="19f-MC-Z79" secondAttribute="trailing" id="vkc-pr-1BC"/>
                         </constraints>
                     </view>
                     <connections>
