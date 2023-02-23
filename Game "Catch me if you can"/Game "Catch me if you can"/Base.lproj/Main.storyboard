@@ -105,7 +105,7 @@
                         <outlet property="playField" destination="zJr-hA-DuI" id="dWD-oU-9uX"/>
                         <outlet property="redSquare" destination="11e-nu-QVh" id="gIc-7g-SXj"/>
                         <outlet property="switchLevel" destination="PFq-n2-952" id="6p2-Bf-zJV"/>
-                        <outlet property="timer" destination="S5U-Xo-xV4" id="ZyR-vl-aVE"/>
+                        <outlet property="timerLabel" destination="S5U-Xo-xV4" id="ZyR-vl-aVE"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
