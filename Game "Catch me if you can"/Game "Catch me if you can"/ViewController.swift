@@ -12,23 +12,47 @@ class ViewController: UIViewController {
     private let secondsPerGame = 10
     private var secondsRemaining = 0
     private var timer = Timer()
+    private var hardModeTimer: Timer?
     
     @IBOutlet private weak var playField: UIView!
     @IBOutlet private weak var redSquare: UIButton!
     @IBOutlet private weak var timerLabel: UILabel!
     @IBOutlet private weak var switchLevel: UISegmentedControl!
     
+    private var isHardMode: Bool {
+        switchLevel.selectedSegmentIndex == 1
+    }
+    
     @IBAction private func tapSquare(_ sender: UIButton) {
-        let maxX = playField.frame.size.width - redSquare.frame.size.width
-        let maxY = playField.frame.size.height - redSquare.frame.size.height
-        redSquare.frame.origin = CGPoint(x: .random(in: 0...maxX), y: .random(in: 0...maxY))
+        if isHardMode {
+            hardModeTimer?.invalidate()
+            hardModeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateHardModeTimer)), userInfo: nil, repeats: true)
+        }
+        
+        updateSquarePosition()
         if count == 0 {
             secondsRemaining = secondsPerGame
             runTimer()
+            
+            let disabledSegmentIndex = isHardMode ? 0 : 1
+            switchLevel.setEnabled(false, forSegmentAt: disabledSegmentIndex)
         }
         count += 1
     }
-
+    
+    @objc
+    private func updateHardModeTimer() {
+        updateSquarePosition()
+    }
+    
+    private func updateSquarePosition() {
+        let maxX = playField.frame.size.width - redSquare.frame.size.width
+        let maxY = playField.frame.size.height - redSquare.frame.size.height
+        UIView.animate(withDuration: 0.3) {
+            self.redSquare.frame.origin = CGPoint(x: .random(in: 0...maxX), y: .random(in: 0...maxY))
+        }
+    }
+    
     private func runTimer() {
         timer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateTimer)), userInfo: nil, repeats: true)
     }
@@ -42,7 +66,11 @@ class ViewController: UIViewController {
             showAlert()
             secondsRemaining = secondsPerGame
             count = 0
+            hardModeTimer?.invalidate()
+            hardModeTimer = nil
             redSquare.frame.origin = CGPoint(x: 8, y: 8)
+            switchLevel.setEnabled(true, forSegmentAt: 1)
+            switchLevel.setEnabled(true, forSegmentAt: 0)
         }
         timerLabel.text = formattedTime(time: TimeInterval(secondsRemaining))
     }
