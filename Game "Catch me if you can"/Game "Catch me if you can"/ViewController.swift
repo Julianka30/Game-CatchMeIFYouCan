@@ -12,7 +12,7 @@ class ViewController: UIViewController {
     private let secondsPerGame = 10
     private var secondsRemaining = 0
     private var timer = Timer()
-    private var hardModeTimer: Timer?
+    private var hardModeTimer = Timer()
     
     @IBOutlet private weak var playField: UIView!
     @IBOutlet private weak var redSquare: UIButton!
@@ -25,10 +25,9 @@ class ViewController: UIViewController {
     
     @IBAction private func tapSquare(_ sender: UIButton) {
         if isHardMode {
-            hardModeTimer?.invalidate()
+            hardModeTimer.invalidate()
             hardModeTimer = Timer.scheduledTimer(timeInterval: 1, target: self, selector: (#selector(ViewController.updateHardModeTimer)), userInfo: nil, repeats: true)
         }
-        
         updateSquarePosition()
         if count == 0 {
             secondsRemaining = secondsPerGame
@@ -66,8 +65,7 @@ class ViewController: UIViewController {
             showAlert()
             secondsRemaining = secondsPerGame
             count = 0
-            hardModeTimer?.invalidate()
-            hardModeTimer = nil
+            hardModeTimer.invalidate()
             redSquare.frame.origin = CGPoint(x: 8, y: 8)
             switchLevel.setEnabled(true, forSegmentAt: 1)
             switchLevel.setEnabled(true, forSegmentAt: 0)
