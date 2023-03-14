@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A31BEF5229BB4EF6004A4969 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */; };
 		A35F47A7299A8A2C00017050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47A6299A8A2C00017050 /* AppDelegate.swift */; };
 		A35F47A9299A8A2C00017050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47A8299A8A2C00017050 /* SceneDelegate.swift */; };
 		A35F47AB299A8A2C00017050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47AA299A8A2C00017050 /* ViewController.swift */; };
@@ -16,6 +17,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A35F47A3299A8A2C00017050 /* Game "Catch me if you can".app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game \"Catch me if you can\".app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35F47A6299A8A2C00017050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A35F47A8299A8A2C00017050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +61,7 @@
 				A35F47A6299A8A2C00017050 /* AppDelegate.swift */,
 				A35F47A8299A8A2C00017050 /* SceneDelegate.swift */,
 				A35F47AA299A8A2C00017050 /* ViewController.swift */,
+				A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */,
 				A35F47AC299A8A2C00017050 /* Main.storyboard */,
 				A35F47AF299A8A2C00017050 /* Assets.xcassets */,
 				A35F47B1299A8A2C00017050 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				A35F47AB299A8A2C00017050 /* ViewController.swift in Sources */,
 				A35F47A7299A8A2C00017050 /* AppDelegate.swift in Sources */,
 				A35F47A9299A8A2C00017050 /* SceneDelegate.swift in Sources */,
+				A31BEF5229BB4EF6004A4969 /* ScoresViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

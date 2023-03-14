@@ -18,6 +18,7 @@ class ViewController: UIViewController {
     @IBOutlet private weak var redSquare: UIButton!
     @IBOutlet private weak var timerLabel: UILabel!
     @IBOutlet private weak var switchLevel: UISegmentedControl!
+    @IBOutlet private weak var scores: UIButton!
     
     private var isHardMode: Bool {
         switchLevel.selectedSegmentIndex == 1
@@ -84,6 +85,11 @@ class ViewController: UIViewController {
         let okAction = UIAlertAction(title: "OK", style: .default)
         alertController.addAction(okAction)
         present(alertController, animated: true)
+    }
+    
+    
+    @IBAction func showGameScore(_ sender: UIButton) {
+        print("Game: 10")
     }
 }
 
