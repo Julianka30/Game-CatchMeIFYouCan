@@ -9,10 +9,13 @@ import UIKit
 
 class ViewController: UIViewController {
     private var count = 0
+    private var date = Date()
     private let secondsPerGame = 10
     private var secondsRemaining = 0
     private var timer = Timer()
     private var hardModeTimer = Timer()
+    private var gameScores: [GameResult] = []
+    private var allScores: [GameResult] = []
     
     @IBOutlet private weak var playField: UIView!
     @IBOutlet private weak var redSquare: UIButton!
@@ -33,9 +36,10 @@ class ViewController: UIViewController {
         if count == 0 {
             secondsRemaining = secondsPerGame
             runTimer()
-            
+            date = Date()
             let disabledSegmentIndex = isHardMode ? 0 : 1
             switchLevel.setEnabled(false, forSegmentAt: disabledSegmentIndex)
+            scores.isEnabled = false
         }
         count += 1
     }
@@ -65,11 +69,20 @@ class ViewController: UIViewController {
             timer.invalidate()
             showAlert()
             secondsRemaining = secondsPerGame
+            allScores.append(GameResult(date: date, score: count))
+            if gameScores.count >= 10 {
+                gameScores.remove(at: 0)
+                gameScores.append(GameResult(date: date, score: count))
+            } else {
+                gameScores.append(GameResult(date: date, score: count))
+            }
+           
             count = 0
             hardModeTimer.invalidate()
             redSquare.frame.origin = CGPoint(x: 8, y: 8)
             switchLevel.setEnabled(true, forSegmentAt: 1)
             switchLevel.setEnabled(true, forSegmentAt: 0)
+            scores.isEnabled = true
         }
         timerLabel.text = formattedTime(time: TimeInterval(secondsRemaining))
     }
@@ -89,7 +102,15 @@ class ViewController: UIViewController {
     
     
     @IBAction func showGameScore(_ sender: UIButton) {
-        print("Game: 10")
+        let scores = storyboard?.instantiateViewController(withIdentifier: "ScoresViewController") as! ScoresViewController
+        scores.modalPresentationStyle = .pageSheet
+        
+        scores.scores = gameScores
+        if let maxScore = allScores.max(by: { $0.score < $1.score }) {
+            scores.bestResult = maxScore.score
+        }
+        
+        present(scores, animated: true)
     }
 }
 

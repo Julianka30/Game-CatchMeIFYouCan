@@ -1,8 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21507" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="21701" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_12" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21505"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="21678"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="System colors in document resources" minToolsVersion="11.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
@@ -25,7 +26,7 @@
                                         <gestureRecognizers/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="51" id="DIM-hf-Pda"/>
-                                            <constraint firstAttribute="width" constant="50" id="Kaa-2M-J0h"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="50" id="Kaa-2M-J0h"/>
                                         </constraints>
                                         <state key="normal" title="Button"/>
                                         <buttonConfiguration key="configuration" style="plain"/>
@@ -48,7 +49,7 @@
                                         <rect key="frame" x="8" y="16" width="99" height="31"/>
                                         <color key="backgroundColor" red="0.9529411793" green="0.7867915996" blue="0.67179115540000001" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
-                                            <constraint firstAttribute="width" constant="99" id="ALC-Zm-A8Q"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="99" id="ALC-Zm-A8Q"/>
                                             <constraint firstAttribute="height" constant="31" id="s28-uv-a1j"/>
                                         </constraints>
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
@@ -56,11 +57,11 @@
                                         <nil key="highlightedColor"/>
                                     </label>
                                     <segmentedControl opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="top" segmentControlStyle="plain" selectedSegmentIndex="0" translatesAutoresizingMaskIntoConstraints="NO" id="PFq-n2-952">
-                                        <rect key="frame" x="205" y="16" width="148" height="32"/>
+                                        <rect key="frame" x="222" y="16" width="148" height="32"/>
                                         <color key="backgroundColor" red="0.96611279250000004" green="0.59786085690000002" blue="0.46303493969999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                         <constraints>
                                             <constraint firstAttribute="height" constant="31" id="Tyh-18-hXM"/>
-                                            <constraint firstAttribute="width" constant="148" id="k2n-rG-4gm"/>
+                                            <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="148" id="k2n-rG-4gm"/>
                                         </constraints>
                                         <segments>
                                             <segment title="Easy"/>
@@ -68,7 +69,7 @@
                                         </segments>
                                     </segmentedControl>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="1sm-3g-UeJ">
-                                        <rect key="frame" x="115" y="16" width="82" height="32"/>
+                                        <rect key="frame" x="115" y="16" width="99" height="32"/>
                                         <color key="backgroundColor" red="0.85912053803469401" green="0.49554364508555432" blue="0.041093137979975804" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <color key="tintColor" systemColor="labelColor"/>
                                         <state key="normal" title="Button"/>
@@ -88,13 +89,13 @@
                                     <constraint firstItem="1sm-3g-UeJ" firstAttribute="top" secondItem="pMS-4Z-wBH" secondAttribute="top" constant="16" id="6gA-i2-bIA"/>
                                     <constraint firstAttribute="bottom" secondItem="1sm-3g-UeJ" secondAttribute="bottom" constant="14" id="94d-4I-Zxc"/>
                                     <constraint firstItem="1sm-3g-UeJ" firstAttribute="leading" secondItem="S5U-Xo-xV4" secondAttribute="trailing" constant="8" symbolic="YES" id="9VR-P1-wob"/>
-                                    <constraint firstItem="1sm-3g-UeJ" firstAttribute="height" secondItem="S5U-Xo-xV4" secondAttribute="height" multiplier="1.03226" id="Fk3-lV-Ocs"/>
+                                    <constraint firstItem="1sm-3g-UeJ" firstAttribute="height" relation="greaterThanOrEqual" secondItem="S5U-Xo-xV4" secondAttribute="height" id="Fk3-lV-Ocs"/>
                                     <constraint firstItem="S5U-Xo-xV4" firstAttribute="leading" secondItem="pMS-4Z-wBH" secondAttribute="leading" constant="8" id="GsY-hY-0eY"/>
                                     <constraint firstAttribute="trailing" secondItem="PFq-n2-952" secondAttribute="trailing" constant="8" id="Lkw-gL-028"/>
                                     <constraint firstAttribute="bottom" secondItem="PFq-n2-952" secondAttribute="bottom" constant="15" id="aMw-BS-rEp"/>
                                     <constraint firstItem="PFq-n2-952" firstAttribute="leading" secondItem="1sm-3g-UeJ" secondAttribute="trailing" constant="8" symbolic="YES" id="cLE-aq-gfe"/>
                                     <constraint firstAttribute="bottom" secondItem="S5U-Xo-xV4" secondAttribute="bottom" constant="15" id="eUf-Sq-RiO"/>
-                                    <constraint firstItem="1sm-3g-UeJ" firstAttribute="width" secondItem="S5U-Xo-xV4" secondAttribute="width" multiplier="0.828283" id="n2X-JT-Rx0"/>
+                                    <constraint firstItem="1sm-3g-UeJ" firstAttribute="width" relation="greaterThanOrEqual" secondItem="S5U-Xo-xV4" secondAttribute="width" id="n2X-JT-Rx0"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Catch Me If You Can 😎" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="19f-MC-Z79">
@@ -134,7 +135,7 @@
         <!--Scores View Controller-->
         <scene sceneID="2lg-VT-PTC">
             <objects>
-                <viewController id="Euy-Um-Z6t" customClass="ScoresViewController" customModule="Game__Catch_me_if_you_can_" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController storyboardIdentifier="ScoresViewController" modalPresentationStyle="overCurrentContext" id="Euy-Um-Z6t" customClass="ScoresViewController" customModule="Game__Catch_me_if_you_can_" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="fx3-Qn-eaq">
                         <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
@@ -142,7 +143,7 @@
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" estimatedSectionHeaderHeight="-1" sectionFooterHeight="28" estimatedSectionFooterHeight="-1" translatesAutoresizingMaskIntoConstraints="NO" id="hYo-bw-jRZ">
                                 <rect key="frame" x="0.0" y="0.0" width="393" height="852"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellIdentifier" id="bZI-IA-AgA" customClass="MyCell" customModule="Test_TableView" customModuleProvider="target">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="CellIdentifier" id="bZI-IA-AgA" customClass="MyCell" customModule="Game__Catch_me_if_you_can_" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="50" width="393" height="43.333332061767578"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="bZI-IA-AgA" id="aRc-jN-2pg">
@@ -170,10 +171,10 @@
                                             </subviews>
                                             <constraints>
                                                 <constraint firstAttribute="bottom" secondItem="PjU-il-G0n" secondAttribute="bottom" constant="10.67" id="4ym-bE-P1S"/>
-                                                <constraint firstAttribute="trailing" secondItem="Ygq-r8-e9F" secondAttribute="trailing" constant="72.670000000000002" id="58q-ju-Qv9"/>
+                                                <constraint firstAttribute="trailing" relation="greaterThanOrEqual" secondItem="Ygq-r8-e9F" secondAttribute="trailing" constant="72.670000000000002" id="58q-ju-Qv9"/>
                                                 <constraint firstItem="PjU-il-G0n" firstAttribute="top" secondItem="aRc-jN-2pg" secondAttribute="top" constant="12" id="8Pp-XB-dUq"/>
                                                 <constraint firstItem="Ygq-r8-e9F" firstAttribute="top" secondItem="aRc-jN-2pg" secondAttribute="top" constant="12" id="HoY-4k-E22"/>
-                                                <constraint firstItem="PjU-il-G0n" firstAttribute="leading" secondItem="aRc-jN-2pg" secondAttribute="leading" constant="31" id="cha-V9-SpK"/>
+                                                <constraint firstItem="PjU-il-G0n" firstAttribute="leading" relation="greaterThanOrEqual" secondItem="aRc-jN-2pg" secondAttribute="leading" constant="31" id="cha-V9-SpK"/>
                                                 <constraint firstItem="Ygq-r8-e9F" firstAttribute="leading" secondItem="PjU-il-G0n" secondAttribute="trailing" constant="81" id="j5r-dE-jQT"/>
                                                 <constraint firstAttribute="bottom" secondItem="Ygq-r8-e9F" secondAttribute="bottom" constant="10.33" id="lyc-3a-tXi"/>
                                             </constraints>

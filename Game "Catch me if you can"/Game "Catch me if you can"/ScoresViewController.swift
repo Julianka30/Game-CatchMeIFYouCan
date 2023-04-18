@@ -16,6 +16,7 @@ class MyCell: UITableViewCell {
     @IBOutlet var dataLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
 }
+
 class ScoresViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
     
     let cellIdentifier = "CellIdentifier"
@@ -45,20 +46,6 @@ class ScoresViewController: UIViewController,UITableViewDataSource, UITableViewD
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        scores = [
-            GameResult(date: Date(timeIntervalSince1970: 1000000), score: 4),
-            GameResult(date: Date(timeIntervalSince1970: 2000000), score: 8),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 5),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 7),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 9),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 3),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 11),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 15),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 2),
-            GameResult(date: Date(timeIntervalSince1970: 3000000), score: 18)
-        ]
-        bestResult = 18
     }
 }
 
