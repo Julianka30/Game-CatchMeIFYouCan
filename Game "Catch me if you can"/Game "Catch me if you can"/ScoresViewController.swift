@@ -18,7 +18,6 @@ class MyCell: UITableViewCell {
 }
 
 class ScoresViewController: UIViewController,UITableViewDataSource, UITableViewDelegate {
-    
     let cellIdentifier = "CellIdentifier"
     var scores: [GameResult] = []
     var bestResult = 0
