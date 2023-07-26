@@ -111,8 +111,7 @@ class ViewController: UIViewController {
         alertController.addAction(okAction)
         present(alertController, animated: true)
     }
-    
-    
+  
     @IBAction func showGameScore(_ sender: UIButton) {
         let scores = storyboard?.instantiateViewController(withIdentifier: "ScoresViewController") as! ScoresViewController
         scores.modalPresentationStyle = .pageSheet
@@ -123,7 +122,7 @@ class ViewController: UIViewController {
         present(scores, animated: true)
     }
 }
-extension NSManagedObjectContext {
+private extension NSManagedObjectContext {
     
     func load() -> [GameResult] {
         let fetchRequest = NSFetchRequest<NSManagedObject>(entityName: "Game")
@@ -142,12 +141,11 @@ extension NSManagedObjectContext {
     }
     
     func save(_ results: [GameResult]) {
-        _ = results.map { result in
+        results.forEach { result in
             let entity = NSEntityDescription.entity(forEntityName: "Game", in: self)!
             let game = NSManagedObject(entity: entity, insertInto: self)
             game.setValue(result.date, forKeyPath: "date")
             game.setValue(result.score, forKeyPath: "score")
-            return game
         }
         do {
             try save()

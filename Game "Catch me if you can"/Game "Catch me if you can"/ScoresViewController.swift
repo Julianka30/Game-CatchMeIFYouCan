@@ -12,7 +12,7 @@ struct GameResult {
     var score: Int
 }
 
-class MyCell: UITableViewCell {
+class GameCell: UITableViewCell {
     @IBOutlet var dataLabel: UILabel!
     @IBOutlet var scoreLabel: UILabel!
 }
@@ -28,7 +28,7 @@ class ScoresViewController: UIViewController,UITableViewDataSource, UITableViewD
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! MyCell
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifier, for: indexPath) as! GameCell
         guard indexPath.row > 0 else { return cell }
         let lastRowIndex = tableView.numberOfRows(inSection: 0) - 1
         if indexPath.row == lastRowIndex {
@@ -42,13 +42,9 @@ class ScoresViewController: UIViewController,UITableViewDataSource, UITableViewD
         return cell
         
     }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-    }
 }
 
-extension Date {
+private extension Date {
     var stringFormatted: String {
         let formatter = DateFormatter()
         formatter.dateFormat = "d.MM.yy/HH:mm:ss"
