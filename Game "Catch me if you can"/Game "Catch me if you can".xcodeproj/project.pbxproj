@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		A3144C8A29EF082100714B48 /* CoreData.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = A3144C8829EF082100714B48 /* CoreData.xcdatamodeld */; };
+		A31BEF5229BB4EF6004A4969 /* ScoresViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */; };
 		A35F47A7299A8A2C00017050 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47A6299A8A2C00017050 /* AppDelegate.swift */; };
 		A35F47A9299A8A2C00017050 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47A8299A8A2C00017050 /* SceneDelegate.swift */; };
 		A35F47AB299A8A2C00017050 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = A35F47AA299A8A2C00017050 /* ViewController.swift */; };
@@ -16,6 +18,8 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		A3144C8929EF082100714B48 /* CoreData.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = CoreData.xcdatamodel; sourceTree = "<group>"; };
+		A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ScoresViewController.swift; sourceTree = "<group>"; };
 		A35F47A3299A8A2C00017050 /* Game "Catch me if you can".app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Game \"Catch me if you can\".app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		A35F47A6299A8A2C00017050 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		A35F47A8299A8A2C00017050 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -59,6 +63,8 @@
 				A35F47A6299A8A2C00017050 /* AppDelegate.swift */,
 				A35F47A8299A8A2C00017050 /* SceneDelegate.swift */,
 				A35F47AA299A8A2C00017050 /* ViewController.swift */,
+				A31BEF5129BB4EF6004A4969 /* ScoresViewController.swift */,
+				A3144C8829EF082100714B48 /* CoreData.xcdatamodeld */,
 				A35F47AC299A8A2C00017050 /* Main.storyboard */,
 				A35F47AF299A8A2C00017050 /* Assets.xcassets */,
 				A35F47B1299A8A2C00017050 /* LaunchScreen.storyboard */,
@@ -140,7 +146,9 @@
 			files = (
 				A35F47AB299A8A2C00017050 /* ViewController.swift in Sources */,
 				A35F47A7299A8A2C00017050 /* AppDelegate.swift in Sources */,
+				A3144C8A29EF082100714B48 /* CoreData.xcdatamodeld in Sources */,
 				A35F47A9299A8A2C00017050 /* SceneDelegate.swift in Sources */,
+				A31BEF5229BB4EF6004A4969 /* ScoresViewController.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -358,6 +366,19 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
+
+/* Begin XCVersionGroup section */
+		A3144C8829EF082100714B48 /* CoreData.xcdatamodeld */ = {
+			isa = XCVersionGroup;
+			children = (
+				A3144C8929EF082100714B48 /* CoreData.xcdatamodel */,
+			);
+			currentVersion = A3144C8929EF082100714B48 /* CoreData.xcdatamodel */;
+			path = CoreData.xcdatamodeld;
+			sourceTree = "<group>";
+			versionGroupType = wrapper.xcdatamodel;
+		};
+/* End XCVersionGroup section */
 	};
 	rootObject = A35F479B299A8A2B00017050 /* Project object */;
 }
